@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '7segFont';
+    src: url('./DSEG7Classic-Regular.woff') format('woff');
+  }
+  
+  .Text {
+    font-family:'7segFont';
+    font-size:24px;
+  }
