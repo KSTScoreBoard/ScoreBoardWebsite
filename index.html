@@ -13,11 +13,19 @@
   </head>
   <body>
     <div class="Text">
-      <div class="btn-group-vertical">
-        <button type="button" id="btn" class="btn btn-danger">123</button>
-        <button type="button" class="btn btn-primary">青</button>
-        <button type="button" class="btn btn-success">緑</button>
-        <button type="button" class="btn btn-warning">黄</button>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-danger active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked>000
+        </label>
+        <label class="btn btn-outline-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off">000
+        </label>
+        <label class="btn btn-outline-success">
+          <input type="radio" name="options" id="option3" autocomplete="off">000
+        </label>
+        <label class="btn btn-outline-warning">
+          <input type="radio" name="options" id="option4" autocomplete="off">000
+        </label>
       </div>
     </div>  
     <!-- jQuery,Popper.js,Bootstrap JSの順番で読み込む-->
