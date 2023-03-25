@@ -35,8 +35,12 @@
   <!-- Content -->
   <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-lg" style="margin: 50px;">送信</button>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-lg" style="margin: 50px;" onclick="onConnectButtonClick()">接続</button>
+          <button type="button" class="btn btn-lg" style="margin: 50px;" onclick="sendSerial()">送信</button>
+        </div>
+        <div class="col-md-6">
+          
         </div>
         <div class="col-lg-3">
           <div class="card mb-3 shadow-sm">
@@ -51,13 +55,16 @@
               </div>
               
               <h1 class="card-title pricing-card-title" id="block1_score">123</h1>
+              
     
               <div class="btn-group btn-group-lg">
                 <button type="button" class="btn btn-outline-primary" data-index="-100" onclick="block1_click(event)"><strong>-</strong></button>
                 <button type="button" class="btn btn-outline-primary" data-index="-10" onclick="block1_click(event)"><strong>-</strong></button>
                 <button type="button" class="btn btn-outline-primary" data-index="-1" onclick="block1_click(event)"><strong>-</strong></button>
               </div>
+              
             </div>
+            <input type="range" id="block1_brightness" class="form-range text-center" min="0" max="8">
           </div>
         </div>
 
