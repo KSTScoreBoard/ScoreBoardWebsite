@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -32,100 +33,104 @@
   </nav>
 
   <!-- Content -->
-  <div class="container">
+  <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-sm-3">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-lg" style="margin: 50px;">送信</button>
+        </div>
+        <div class="col-md-3">
           <div class="card mb-3 shadow-sm">
             <div class="card-header bg-primary">
               <h4 class="my-0 font-weight-normal text-light">青</h4>
             </div>
             <div class="card-body">
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
+                <button type="button" class="btn btn-outline-primary" data-index="+100" onclick="block1_click(event)"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-primary" data-index="+10" onclick="block1_click(event)"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-primary" data-index="+1" onclick="block1_click(event)"><strong>+</strong></button>
               </div>
               
-              <h1 class="card-title pricing-card-title">123</h1>
+              <h1 class="card-title pricing-card-title" id="block1_score">123</h1>
     
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
+                <button type="button" class="btn btn-outline-primary" data-index="-100" onclick="block1_click(event)"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-primary" data-index="-10" onclick="block1_click(event)"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-primary" data-index="-1" onclick="block1_click(event)"><strong>-</strong></button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-md-3">
           <div class="card mb-3 shadow-sm">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-danger">
               <h4 class="my-0 font-weight-normal text-light">青</h4>
             </div>
             <div class="card-body">
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
+                <button type="button" class="btn btn-outline-danger"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-danger"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-danger"><strong>+</strong></button>
               </div>
               
               <h1 class="card-title pricing-card-title">123</h1>
     
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
+                <button type="button" class="btn btn-outline-danger"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-danger"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-danger"><strong>-</strong></button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-md-3">
           <div class="card mb-3 shadow-sm">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-success">
               <h4 class="my-0 font-weight-normal text-light">青</h4>
             </div>
             <div class="card-body">
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
+                <button type="button" class="btn btn-outline-success"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-success"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-success"><strong>+</strong></button>
               </div>
               
               <h1 class="card-title pricing-card-title">123</h1>
     
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
+                <button type="button" class="btn btn-outline-success"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-success"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-success"><strong>-</strong></button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-md-3">
           <div class="card mb-3 shadow-sm">
-            <div class="card-header bg-primary">
+            <div class="card-header bg-warning">
               <h4 class="my-0 font-weight-normal text-light">青</h4>
             </div>
             <div class="card-body">
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
-                <button type="button" class="btn btn-primary">+</button>
+                <button type="button" class="btn btn-outline-warning"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-warning"><strong>+</strong></button>
+                <button type="button" class="btn btn-outline-warning"><strong>+</strong></button>
               </div>
               
               <h1 class="card-title pricing-card-title">123</h1>
     
               <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
-                <button type="button" class="btn btn-primary">-</button>
+                <button type="button" class="btn btn-outline-warning"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-warning"><strong>-</strong></button>
+                <button type="button" class="btn btn-outline-warning"><strong>-</strong></button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        
       
   </div>
   

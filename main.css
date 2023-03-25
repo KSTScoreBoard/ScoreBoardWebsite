@@ -1,9 +1,13 @@
+.card-body .btn{
+  width: 100px;
+}
+
 @font-face {
-    font-family: '7segFont';
-    src: url('./DSEG7Classic-Regular.woff') format('woff');
-  }
-  
-  .Text {
-    font-family:'7segFont';
-    font-size:24px;
-  }
+  font-family: 'DSEG7';
+  src: url('DSEG7Classic-Regular.woff');
+}
+
+.card-body h1{
+  font-family: 'DSEG7';
+  margin: 10px;
+}
