@@ -7,7 +7,8 @@
   src: url('DSEG7Classic-Regular.woff');
 }
 
-.card-body h1{
+.card-body p{
   font-family: 'DSEG7';
+  font-size: 40pt;
   margin: 10px;
 }
