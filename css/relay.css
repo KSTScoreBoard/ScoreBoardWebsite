@@ -1,0 +1,14 @@
+.card-body .btn{
+  width: 50px
+}
+
+@font-face {
+  font-family: 'DSEG7';
+  src: url('DSEG7Classic-Regular.woff');
+}
+
+.card-body p{
+  font-family: 'DSEG7';
+  font-size: 40pt;
+  margin: 10px;
+}

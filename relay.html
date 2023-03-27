@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>電光掲示板用アプリ</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/relay.css">
+  <script src="js/relay.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <a class="navbar-brand" href="index.html">KST電子工作同好会 電光掲示板用アプリ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">中継アプリ</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">直接通信</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>これは中継モードです</h2>
+        </div>
+        <div class="col-md-12">
+          <button type="button" class="btn btn-lg" style="margin: 10px;" onclick="onConnectButtonClick()">TweLite接続</button>
+        </div>
+        <div class="col-lg-3 text-center">
+          <div class="card mb-3 shadow-sm">
+            <div class="card-header bg-primary">
+              <h4 class="my-0 font-weight-normal text-light">青</h4>
+            </div>
+            <div class="card-body">
+
+              
+              <p class="card-title pricing-card-title" id="b1_score">123</p>
+              
+
+              
+            </div>
+            <input type="range" id="b1_lv" class="form-range text-center" min="0" max="8" disabled="true">
+          </div>
+        </div>
+
+        
+      
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
