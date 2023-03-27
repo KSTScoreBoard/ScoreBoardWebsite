@@ -10,6 +10,7 @@ window.onload = function(){
 socket.addEventListener('open', function (event) {
     console.log('open',event)
     socket.send(JSON.stringify({"auth":auth}));
+    onConnectButtonClick();
 });
 
 socket.addEventListener('message', function (event) {
@@ -26,13 +27,15 @@ socket.addEventListener('message', function (event) {
     document.getElementById('b1_score').textContent = json.b1_score;
     document.getElementById('b1_lv').value = json.b1_lv;
 
-    //sendSerial(json);
+    sendSerial(json);
 })
 
 async function onConnectButtonClick() {
+  console.log("A");
   try {
       port = await navigator.serial.requestPort();
       await port.open({ baudRate: 115200 });
+      document.getElementById('connectButton').textContent = '接続済み';
 
       while (port.readable) {
           const reader = port.readable.getReader();
@@ -71,9 +74,13 @@ async function sendSerial(json) {
   payload.set(data,header.length);
   payload.set(checkSum,header.length + data.length);
 
-  const writer = port.writable.getWriter();
-  await writer.write(payload);
-  writer.releaseLock();
+  try{
+    const writer = port.writable.getWriter();
+    await writer.write(payload);
+    writer.releaseLock();
+  }catch{
+
+  }
 }
 
 function cal_checkSum(array){
