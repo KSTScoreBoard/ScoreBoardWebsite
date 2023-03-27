@@ -1,9 +1,15 @@
 const socket = new WebSocket('wss://cloud.achex.ca/kst-denshikousaku');
 let port;
+let auth;
+
+window.onload = function(){
+  auth = Math.floor(Math.random() * 9999).toString().padStart(4,"0");
+  document.getElementById('auth').textContent = '認証コード:' + auth;
+}
 
 socket.addEventListener('open', function (event) {
     console.log('open',event)
-    socket.send('{"auth":"receiver"}');
+    socket.send(JSON.stringify({"auth":auth}));
 });
 
 socket.addEventListener('message', function (event) {
@@ -20,7 +26,7 @@ socket.addEventListener('message', function (event) {
     document.getElementById('b1_score').textContent = json.b1_score;
     document.getElementById('b1_lv').value = json.b1_lv;
 
-    sendSerial(json);
+    //sendSerial(json);
 })
 
 async function onConnectButtonClick() {
