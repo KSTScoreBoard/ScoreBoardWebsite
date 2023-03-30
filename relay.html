@@ -41,12 +41,24 @@
   <!-- Content -->
   <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12 text-center">
-          <h2>これは中継モードです</h2>
-          <h2 id="auth">1234</h2>
+        <div class="col-md-3">
+          <h2>中継モード</h2>
         </div>
+        <div class="col-md-9 text-left">
+          <h2 id="auth"></h2>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-12">
           <button type="button" class="btn btn-lg" style="margin: 10px;" id="connectButton" onclick="onConnectButtonClick()">TweLite未接続</button>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>RadioA
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off">RadioB
+            </label>
+          </div>
         </div>
         <div class="col-lg-3 text-center">
           <div class="card mb-3 shadow-sm">
@@ -56,7 +68,7 @@
             <div class="card-body">
 
               
-              <p class="card-title pricing-card-title" id="b1_score">123</p>
+              <p class="card-title pricing-card-title" id="b1_score">000</p>
               
 
               
