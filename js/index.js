@@ -2,7 +2,7 @@ const socket = new WebSocket('wss://cloud.achex.ca/kst-denshikousaku');
 let auth = "";
 
 socket.addEventListener('open', function (event) {
-  auth = window.prompt("認証コードを入力してください", "");
+  auth = window.prompt("ペアコードを入力してください", "");
   console.log('open',event)
   // 事前登録などはなく使用時に好きなものを入れられます。
   socket.send('{"auth":"sneder"}');
@@ -19,8 +19,8 @@ socket.addEventListener('message', function (event) {
 })
 
 function send(){
-  var b1_score = Number(document.getElementById('b1_score').textContent);
-  var b1_lv = Number(document.getElementById('b1_lv').value);
+  var b1_score = document.getElementById('b1_score').textContent;
+  var b1_lv = document.getElementById('b1_lv').value;
   socket.send(JSON.stringify({"to":auth, "b1_score":b1_score, "b1_lv":b1_lv}));
 }
 
