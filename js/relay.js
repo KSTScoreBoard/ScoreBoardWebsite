@@ -4,7 +4,7 @@ let auth;
 
 window.onload = function(){
   auth = Math.floor(Math.random() * 9999).toString().padStart(4,"0");
-  document.getElementById('auth').textContent = '認証コード:' + auth;
+  document.getElementById('auth').textContent = 'ペアコード:' + auth;
 }
 
 socket.addEventListener('open', function (event) {
@@ -31,7 +31,6 @@ socket.addEventListener('message', function (event) {
 })
 
 async function onConnectButtonClick() {
-  console.log("A");
   try {
       port = await navigator.serial.requestPort();
       await port.open({ baudRate: 115200 });
