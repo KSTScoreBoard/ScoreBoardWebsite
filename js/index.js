@@ -2,17 +2,37 @@ const socket = new WebSocket('wss://cloud.achex.ca');
 //メモ　変更を反映させるボタン
 
 window.addEventListener('load', (event) => {
-  document.getElementById('block1_color').classList.add('bg-' + window.localStorage.getItem('block1_color'));
-  document.getElementById('block1_name').textContent = window.localStorage.getItem('block1_name');
+  if(window.localStorage.getItem('block1_color') == null){
+    window.localStorage.setItem('block1_name','赤');
+    window.localStorage.setItem('block1_color','danger');
+    window.localStorage.setItem('block1_id','1');
 
-  document.getElementById('block2_color').classList.add('bg-' + window.localStorage.getItem('block2_color'));
-  document.getElementById('block2_name').textContent = window.localStorage.getItem('block2_name');
+    window.localStorage.setItem('block2_name','青');
+    window.localStorage.setItem('block2_color','primary');
+    window.localStorage.setItem('block2_id','2');
 
-  document.getElementById('block3_color').classList.add('bg-' + window.localStorage.getItem('block3_color'));
-  document.getElementById('block3_name').textContent = window.localStorage.getItem('block3_name');
+    window.localStorage.setItem('block3_name','緑');
+    window.localStorage.setItem('block3_color','success');
+    window.localStorage.setItem('block3_id','3');
 
-  document.getElementById('block4_color').classList.add('bg-' + window.localStorage.getItem('block4_color'));
-  document.getElementById('block4_name').textContent = window.localStorage.getItem('block4_name');
+    window.localStorage.setItem('block4_name','黄');
+    window.localStorage.setItem('block4_color','warning');
+    window.localStorage.setItem('block4_id','4');
+    location.reload();
+  }else{
+    document.getElementById('block1_color').classList.add('bg-' + window.localStorage.getItem('block1_color'));
+    document.getElementById('block1_name').textContent = window.localStorage.getItem('block1_name');
+  
+    document.getElementById('block2_color').classList.add('bg-' + window.localStorage.getItem('block2_color'));
+    document.getElementById('block2_name').textContent = window.localStorage.getItem('block2_name');
+  
+    document.getElementById('block3_color').classList.add('bg-' + window.localStorage.getItem('block3_color'));
+    document.getElementById('block3_name').textContent = window.localStorage.getItem('block3_name');
+  
+    document.getElementById('block4_color').classList.add('bg-' + window.localStorage.getItem('block4_color'));
+    document.getElementById('block4_name').textContent = window.localStorage.getItem('block4_name');
+  }
+  
 });
 
 socket.addEventListener('open', function (event) {

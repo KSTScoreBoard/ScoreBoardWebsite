@@ -2,6 +2,8 @@
 var colors = ['danger','primary','success','warning'];
 
 window.addEventListener('load', (event) => {
+  console.log(window.localStorage.getItem('block1_name'));
+  
   document.getElementById('block1_name').value = window.localStorage.getItem('block1_name');
   document.getElementById('block1_id').value = window.localStorage.getItem('block1_id');
   elements = document.getElementsByName('block1_colors');
