@@ -2,6 +2,7 @@ const socket = new WebSocket('wss://cloud.achex.ca');
 //メモ　変更を反映させるボタン
 
 window.addEventListener('load', (event) => {
+  console.log(window.localStorage.getItem('block1_color'));
   if(window.localStorage.getItem('block1_color') == null){
     window.localStorage.setItem('block1_name','赤');
     window.localStorage.setItem('block1_color','danger');
