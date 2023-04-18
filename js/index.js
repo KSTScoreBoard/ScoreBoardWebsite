@@ -1,6 +1,20 @@
 const socket = new WebSocket('wss://cloud.achex.ca');
 //メモ　変更を反映させるボタン
 
+window.addEventListener('load', (event) => {
+  document.getElementById('block1_color').classList.add('bg-' + window.localStorage.getItem('block1_color'));
+  document.getElementById('block1_name').textContent = window.localStorage.getItem('block1_name');
+
+  document.getElementById('block2_color').classList.add('bg-' + window.localStorage.getItem('block2_color'));
+  document.getElementById('block2_name').textContent = window.localStorage.getItem('block2_name');
+
+  document.getElementById('block3_color').classList.add('bg-' + window.localStorage.getItem('block3_color'));
+  document.getElementById('block3_name').textContent = window.localStorage.getItem('block3_name');
+
+  document.getElementById('block4_color').classList.add('bg-' + window.localStorage.getItem('block4_color'));
+  document.getElementById('block4_name').textContent = window.localStorage.getItem('block4_name');
+});
+
 socket.addEventListener('open', function (event) {
   console.log('open',event)
   // 事前登録などはなく使用時に好きなものを入れられます。

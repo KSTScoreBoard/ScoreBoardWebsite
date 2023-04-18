@@ -14,17 +14,17 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">KST ScoreBoardApp</a>
+      <a class="navbar-brand" href="index.html">KST ScoreBoardApp</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="setting.html">setting</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
@@ -39,28 +39,126 @@
 
   <!-- Content -->
   <div class="container-fluid">
+    
     <div class="row">
       <div class="col-lg-3 text-center">
+        
         <div class="card shadow-sm">
           <div class="card-header bg-secondary">
             <h3 class="font-weight-normal text-light">Block1</h3>
           </div>
           <div class="card-body">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ブロック名</span>
+              <input type="text" class="form-control" id="block1_name" aria-label="Blockname" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ID</span>
+              <input type="text" class="form-control" id="block1_id" aria-label="id" aria-describedby="addon-wrapping">
+            </div>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-              <label class="btn btn-outline-danger" for="btnradio1">赤</label>
+              <input type="radio" class="btn-check" name="block1_colors" id="btnradio1_block1" autocomplete="off" checked>
+              <label class="btn btn-outline-danger" for="btnradio1_block1">赤</label>
             
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btnradio2">青</label>
+              <input type="radio" class="btn-check" name="block1_colors" id="btnradio2_block1" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnradio2_block1">青</label>
             
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-              <label class="btn btn-outline-success" for="btnradio3">緑</label>
+              <input type="radio" class="btn-check" name="block1_colors" id="btnradio3_block1" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio3_block1">緑</label>
 
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-              <label class="btn btn-outline-warning" for="btnradio4">黄</label>
+              <input type="radio" class="btn-check" name="block1_colors" id="btnradio4_block1" autocomplete="off">
+              <label class="btn btn-outline-warning" for="btnradio4_block1">黄</label>
             </div>
           </div>     
         </div>
+
+        <div class="card shadow-sm">
+          <div class="card-header bg-secondary">
+            <h3 class="font-weight-normal text-light">Block2</h3>
+          </div>
+          <div class="card-body">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ブロック名</span>
+              <input type="text" class="form-control" id="block2_name" aria-label="Blockname" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ID</span>
+              <input type="text" class="form-control" id="block2_id" aria-label="id" aria-describedby="addon-wrapping">
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="block2_colors" id="btnradio1_block2" autocomplete="off" checked>
+              <label class="btn btn-outline-danger" for="btnradio1_block2">赤</label>
+            
+              <input type="radio" class="btn-check" name="block2_colors" id="btnradio2_block2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnradio2_block2">青</label>
+            
+              <input type="radio" class="btn-check" name="block2_colors" id="btnradio3_block2" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio3_block2">緑</label>
+
+              <input type="radio" class="btn-check" name="block2_colors" id="btnradio4_block2" autocomplete="off">
+              <label class="btn btn-outline-warning" for="btnradio4_block2">黄</label>
+            </div>
+          </div>     
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-header bg-secondary">
+            <h3 class="font-weight-normal text-light">Block3</h3>
+          </div>
+          <div class="card-body">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ブロック名</span>
+              <input type="text" class="form-control" id="block3_name" aria-label="Blockname" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ID</span>
+              <input type="text" class="form-control" id="block3_id" aria-label="id" aria-describedby="addon-wrapping">
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="block3_colors" id="btnradio1_block3" autocomplete="off" checked>
+              <label class="btn btn-outline-danger" for="btnradio1_block3">赤</label>
+            
+              <input type="radio" class="btn-check" name="block3_colors" id="btnradio2_block3" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnradio2_block3">青</label>
+            
+              <input type="radio" class="btn-check" name="block3_colors" id="btnradio3_block3" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio3_block3">緑</label>
+
+              <input type="radio" class="btn-check" name="block3_colors" id="btnradio4_block3" autocomplete="off">
+              <label class="btn btn-outline-warning" for="btnradio4_block3">黄</label>
+            </div>
+          </div>     
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-header bg-secondary">
+            <h3 class="font-weight-normal text-light">Block4</h3>
+          </div>
+          <div class="card-body">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ブロック名</span>
+              <input type="text" class="form-control" id="block4_name" aria-label="Blockname" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text">ID</span>
+              <input type="text" class="form-control" id="block4_id" aria-label="id" aria-describedby="addon-wrapping">
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="block4_colors" id="btnradio1_block4" autocomplete="off" checked>
+              <label class="btn btn-outline-danger" for="btnradio1_block4">赤</label>
+            
+              <input type="radio" class="btn-check" name="block4_colors" id="btnradio2_block4" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btnradio2_block4">青</label>
+            
+              <input type="radio" class="btn-check" name="block4_colors" id="btnradio3_block4" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio3_block4">緑</label>
+
+              <input type="radio" class="btn-check" name="block4_colors" id="btnradio4_block4" autocomplete="off">
+              <label class="btn btn-outline-warning" for="btnradio4_block4">黄</label>
+            </div>
+          </div>     
+        </div>
+        <button type="button" class="btn btn-lg btn-outline-secondary" onclick="set()">保存</button>
       </div>
 
 
