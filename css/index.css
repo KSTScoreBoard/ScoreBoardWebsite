@@ -2,6 +2,11 @@
   width: 50px
 }
 
+.btn:hover{
+  background: #00000000;
+    color: #6C757D;
+}
+
 @font-face {
   font-family: 'DSEG7';
   src: url('DSEG7Classic-Regular.woff');
