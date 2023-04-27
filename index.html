@@ -50,29 +50,67 @@
             </div>     
           </div>
         </div>
-        <div class="col-lg-3 text-center">
+        <div class="col-lg-3 text-center" id="block1">
           <div class="card shadow-sm">
-            <div class="card-header" id="block1_color">
-              <h3 class="font-weight-normal text-light" id="block1_name"></h3>
+            <div class="card-header" name="color">
+              <h3 class="font-weight-normal" name="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="b1_score">000</p>
+                <p class="card-title pricing-card-title" name="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b1_score',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="b1_level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="col"><input type="range" name="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                  <input type="checkbox" class="btn-check" id="block1_hidden1" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block1_hidden1">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="block1_hidden2" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block1_hidden2">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="block1_hidden3" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block1_hidden3">非表示</label>
+                </div>
+              </div>
+            </div>     
+          </div>
+        </div>
+
+        <div class="col-lg-3 text-center" id="block1">
+          <div class="card shadow-sm">
+            <div class="card-header" id="color">
+              <h3 class="font-weight-normal" id="name"></h3>
+            </div>
+            <div class="card-body">
+              <div class="row row-cols-1">
+                <div class="col">
+                  <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
+                  </div>  
+                </div>
+                <p class="card-title pricing-card-title" id="score">000</p>
+                <div class="col">
+                  <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
+                  </div>
+                </div>
+                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                   <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                   <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
@@ -88,85 +126,77 @@
           </div>
         </div>
 
-        <div class="col-lg-3 text-center">
+        <div class="col-lg-3 text-center" id="block1">
           <div class="card shadow-sm">
-            <div class="card-header" id="block2_color">
-              <h3 class="font-weight-normal text-light" id="block2_name"></h3>
+            <div class="card-header" id="color">
+              <h3 class="font-weight-normal" id="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="b2_score">000</p>
+                <p class="card-title pricing-card-title" id="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b2_score',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="b2_level" class="form-range mt-2" min="0" max="8"></div>
+                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck2">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck3">非表示</label>
+                </div>
               </div>
             </div>     
           </div>
         </div>
 
-        <div class="col-lg-3 text-center">
+        <div class="col-lg-3 text-center" id="block1">
           <div class="card shadow-sm">
-            <div class="card-header" id="block3_color">
-              <h3 class="font-weight-normal text-light" id="block3_name"></h3>
+            <div class="card-header" id="color">
+              <h3 class="font-weight-normal" id="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="b3_score">000</p>
+                <p class="card-title pricing-card-title" id="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b3_score',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="b3_level" class="form-range mt-2" min="0" max="8"></div>
-              </div>
-            </div>     
-          </div>
-        </div>
-
-        <div class="col-lg-3 text-center">
-          <div class="card shadow-sm">
-            <div class="card-header" id="block4_color">
-              <h3 class="font-weight-normal text-light" id="block4_name"></h3>
-            </div>
-            <div class="card-body">
-              <div class="row row-cols-1">
-                <div class="col">
-                  <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',+1)"><strong>+</strong></button>
-                  </div>  
+                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck2">非表示</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="btncheck3">非表示</label>
                 </div>
-                <p class="card-title pricing-card-title" id="b4_score">000</p>
-                <div class="col">
-                  <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('b4_score',-1)"><strong>-</strong></button>
-                  </div>
-                </div>
-                <div class="col"><input type="range" id="b4_level" class="form-range mt-2" min="0" max="8"></div>
               </div>
             </div>     
           </div>
