@@ -46,14 +46,15 @@
               <h3 class="font-weight-normal">コントロール</h3>
             </div>
             <div class="card-body">
-              <button type="button" class="btn btn-lg btn-outline-secondary" onclick="send()">送信</button>
+              <button type="button" class="btn btn-lg btn-outline-secondary w-100" onclick="send()">送信</button>
             </div>     
           </div>
         </div>
+
         <div class="col-lg-3 text-center" id="block1">
           <div class="card shadow-sm">
             <div class="card-header" name="color">
-              <h3 class="font-weight-normal" name="name"></h3>
+              <h3 class="font-weight-normal text-light" name="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
@@ -74,13 +75,13 @@
                 </div>
                 <div class="col"><input type="range" name="level" class="form-range mt-2" min="0" max="7"></div>
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="block1_hidden1" autocomplete="off">
+                  <input type="checkbox" class="btn-check" id="block1_hidden1" name="block1_hidden" autocomplete="off">
                   <label class="btn btn-outline-secondary" for="block1_hidden1">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="block1_hidden2" autocomplete="off">
+                  <input type="checkbox" class="btn-check" id="block1_hidden2" name="block1_hidden" autocomplete="off">
                   <label class="btn btn-outline-secondary" for="block1_hidden2">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="block1_hidden3" autocomplete="off">
+                  <input type="checkbox" class="btn-check" id="block1_hidden3" name="block1_hidden" autocomplete="off">
                   <label class="btn btn-outline-secondary" for="block1_hidden3">非表示</label>
                 </div>
               </div>
@@ -88,114 +89,114 @@
           </div>
         </div>
 
-        <div class="col-lg-3 text-center" id="block1">
+        <div class="col-lg-3 text-center" id="block2">
           <div class="card shadow-sm">
-            <div class="card-header" id="color">
-              <h3 class="font-weight-normal" id="name"></h3>
+            <div class="card-header" name="color">
+              <h3 class="font-weight-normal text-light" name="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="score">000</p>
+                <p class="card-title pricing-card-title" name="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block2',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="col"><input type="range" name="level" class="form-range mt-2" min="0" max="7"></div>
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block2_hidden1" name="block2_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block2_hidden1">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck2">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block2_hidden2" name="block2_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block2_hidden2">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck3">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block2_hidden3" name="block2_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block2_hidden3">非表示</label>
                 </div>
               </div>
             </div>     
           </div>
         </div>
 
-        <div class="col-lg-3 text-center" id="block1">
+        <div class="col-lg-3 text-center" id="block3">
           <div class="card shadow-sm">
-            <div class="card-header" id="color">
-              <h3 class="font-weight-normal" id="name"></h3>
+            <div class="card-header" name="color">
+              <h3 class="font-weight-normal text-light" name="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="score">000</p>
+                <p class="card-title pricing-card-title" name="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block3',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="col"><input type="range" name="level" class="form-range mt-2" min="0" max="7"></div>
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block3_hidden1" name="block3_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block3_hidden1">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck2">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block3_hidden2" name="block3_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block3_hidden2">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck3">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block3_hidden3" name="block4_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block3_hidden3">非表示</label>
                 </div>
               </div>
             </div>     
           </div>
         </div>
 
-        <div class="col-lg-3 text-center" id="block1">
+        <div class="col-lg-3 text-center" id="block4">
           <div class="card shadow-sm">
-            <div class="card-header" id="color">
-              <h3 class="font-weight-normal" id="name"></h3>
+            <div class="card-header" name="color">
+              <h3 class="font-weight-normal text-light" name="name"></h3>
             </div>
             <div class="card-body">
               <div class="row row-cols-1">
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+100)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+10)"><strong>+</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',+1)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',+100)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',+10)"><strong>+</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',+1)"><strong>+</strong></button>
                   </div>  
                 </div>
-                <p class="card-title pricing-card-title" id="score">000</p>
+                <p class="card-title pricing-card-title" name="score">000</p>
                 <div class="col">
                   <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-100)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-10)"><strong>-</strong></button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block1',-1)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',-100)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',-10)"><strong>-</strong></button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="score_append('block4',-1)"><strong>-</strong></button>
                   </div>
                 </div>
-                <div class="col"><input type="range" id="level" class="form-range mt-2" min="0" max="7"></div>
+                <div class="col"><input type="range" name="level" class="form-range mt-2" min="0" max="7"></div>
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck1">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block4_hidden1" name="block4_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block4_hidden1">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck2">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block4_hidden2" name="block4_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block4_hidden2">非表示</label>
                 
-                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                  <label class="btn btn-outline-secondary" for="btncheck3">非表示</label>
+                  <input type="checkbox" class="btn-check" id="block4_hidden3" name="block4_hidden" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="block4_hidden3">非表示</label>
                 </div>
               </div>
             </div>     
