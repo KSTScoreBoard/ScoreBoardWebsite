@@ -2,6 +2,9 @@ const socket = new WebSocket('wss://cloud.achex.ca');
 //メモ　変更を反映させるボタン
 
 window.addEventListener('load', (event) => {
+  document.querySelector('#block1 #name').textContent = "赤";
+/*
+
   if(window.localStorage.getItem('block1_color') == null){
     window.localStorage.setItem('block1_name','赤');
     window.localStorage.setItem('block1_color','danger');
@@ -32,6 +35,7 @@ window.addEventListener('load', (event) => {
     document.getElementById('block4_color').classList.add('bg-' + window.localStorage.getItem('block4_color'));
     document.getElementById('block4_name').textContent = window.localStorage.getItem('block4_name');
   }
+  */
   
 });
 
@@ -39,6 +43,8 @@ socket.addEventListener('open', function (event) {
   console.log('open',event)
   // 事前登録などはなく使用時に好きなものを入れられます。
   socket.send('{"auth":"sender"}');
+  socket.send('{"joinHub":"KST"}');
+
 });
 
 socket.addEventListener('message', function (event) {
@@ -60,9 +66,9 @@ function send(){
 }
 
 function score_append(element,append){
-  var score = Number(document.getElementById(element).textContent);
+  var score = Number(document.querySelector('#' + element + " #score").textContent);
   score += append;
   if(score > 999) score = 999;
   if(score < 0) score = 0;
-  document.getElementById(element).textContent = String(score).padStart(3,'0');
+  document.querySelector('#' + element + " #score").textContent = String(score).padStart(3,'0');
 }
