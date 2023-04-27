@@ -1,3 +1,26 @@
+const socket = new WebSocket('wss://cloud.achex.ca');
+
+socket.addEventListener('open', function (event) {
+  console.log('open',event)
+  // 事前登録などはなく使用時に好きなものを入れられます。
+  socket.send('{"auth":"sender"}');
+  socket.send('{"joinHub":"KST"}');
+
+});
+
+socket.addEventListener('message', function (event) {
+  console.log('message',event)
+  const json = JSON.parse(event.data)
+  // auth時のレスポンスもmessageで来るので弾いておきます
+  if (json.joinHub == 'OK') {
+    socket.send(JSON.stringify({"to":"1","score":10,"level":4,"hidden0":true,"hidden1":false,"hidden2":true}));
+    socket.send(JSON.stringify({"to":"2","score":20,"level":4,"hidden0":true,"hidden1":false,"hidden2":true}));
+    socket.send(JSON.stringify({"to":"3","score":30,"level":4,"hidden0":true,"hidden1":false,"hidden2":true}));
+    socket.send(JSON.stringify({"to":"4","score":40,"level":4,"hidden0":true,"hidden1":false,"hidden2":true}));
+    return
+  }
+})
+
 window.addEventListener('load', (event) => {
   if(window.localStorage.getItem('block1') == null){
     window.localStorage.setItem('block1','{"name":"赤","to":"1","color":"1"}');
