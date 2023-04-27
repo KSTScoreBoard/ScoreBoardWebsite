@@ -5,22 +5,22 @@ window.addEventListener('load', (event) => {
     window.localStorage.setItem('block3','{"name":"緑","id":"2","color":"2"}');
     window.localStorage.setItem('block4','{"name":"黄","id":"3","color":"3"}');
   }
-  setBlockData('block1');
-  setBlockData('block2');
-  setBlockData('block3');
-  setBlockData('block4');
+  readBlockConfig('block1');
+  readBlockConfig('block2');
+  readBlockConfig('block3');
+  readBlockConfig('block4');
 
 });
 
 function set(){
-  window.localStorage.setItem('block1',JSON.stringify(getBlockData('block1')));
-  window.localStorage.setItem('block2',JSON.stringify(getBlockData('block2')));
-  window.localStorage.setItem('block3',JSON.stringify(getBlockData('block3')));
-  window.localStorage.setItem('block4',JSON.stringify(getBlockData('block4')));
+  window.localStorage.setItem('block1',JSON.stringify(writeBlockConfig('block1')));
+  window.localStorage.setItem('block2',JSON.stringify(writeBlockConfig('block2')));
+  window.localStorage.setItem('block3',JSON.stringify(writeBlockConfig('block3')));
+  window.localStorage.setItem('block4',JSON.stringify(writeBlockConfig('block4')));
   alert("設定を保存しました");
 }
 
-function getBlockData(target){
+function writeBlockConfig(target){
   var id;
   var color;
 
@@ -43,7 +43,7 @@ function getBlockData(target){
   return json;
 }
 
-function setBlockData(target){
+function readBlockConfig(target){
   var json = JSON.parse(window.localStorage.getItem(target));
   document.querySelector("#" + target + " input[name='name']").value = json['name'];
   document.querySelectorAll("#" + target + " input[name='" + target + "_id']")[json['id']].checked = true;
