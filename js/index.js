@@ -41,8 +41,11 @@ function setBlockConfig(target){
 }
 
 function send(){
-  console.log(createJSON('block1'));
-  //socket.send();
+  socket.send(createJSON('block1'));
+  socket.send(createJSON('block2'));
+  socket.send(createJSON('block3'));
+  socket.send(createJSON('block4'));
+
 }
 
 function createJSON(target){
@@ -50,8 +53,7 @@ function createJSON(target){
   var score = Number(document.querySelector("#" + target + " p[name='score']").textContent);
   var level = Number(document.querySelector("#" + target + " input[name='level']").value);
   var hidden = document.querySelectorAll("#" + target + " input[name='" + target + "_hidden']");
-  console.log(hidden);
-  return JSON.stringify({"to":to,"score":score,"level":level,"hidden0":hidden[0].checked,"hidden1":hidden[1].checked,"hidden2":hidden[2].checked});
+  return JSON.stringify({"to":String(to),"score":score,"level":level,"hidden0":hidden[0].checked,"hidden1":hidden[1].checked,"hidden2":hidden[2].checked});
 }
 
 function score_append(element,append){
