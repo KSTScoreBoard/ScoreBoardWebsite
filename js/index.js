@@ -2,41 +2,18 @@ const socket = new WebSocket('wss://cloud.achex.ca');
 //メモ　変更を反映させるボタン
 
 window.addEventListener('load', (event) => {
-  document.querySelector('#block1 #name').textContent = "赤";
-/*
-
-  if(window.localStorage.getItem('block1_color') == null){
-    window.localStorage.setItem('block1_name','赤');
-    window.localStorage.setItem('block1_color','danger');
-    window.localStorage.setItem('block1_id','1');
-
-    window.localStorage.setItem('block2_name','青');
-    window.localStorage.setItem('block2_color','primary');
-    window.localStorage.setItem('block2_id','2');
-
-    window.localStorage.setItem('block3_name','緑');
-    window.localStorage.setItem('block3_color','success');
-    window.localStorage.setItem('block3_id','3');
-
-    window.localStorage.setItem('block4_name','黄');
-    window.localStorage.setItem('block4_color','warning');
-    window.localStorage.setItem('block4_id','4');
+  if(window.localStorage.getItem('block1') == null){
+    window.localStorage.setItem('block1','{"name":"赤","to":"1","color":"1"}');
+    window.localStorage.setItem('block2','{"name":"青","to":"2","color":"2"}');
+    window.localStorage.setItem('block3','{"name":"緑","to":"3","color":"3"}');
+    window.localStorage.setItem('block4','{"name":"黄","to":"4","color":"4"}');
     location.reload();
   }else{
-    document.getElementById('block1_color').classList.add('bg-' + window.localStorage.getItem('block1_color'));
-    document.getElementById('block1_name').textContent = window.localStorage.getItem('block1_name');
-  
-    document.getElementById('block2_color').classList.add('bg-' + window.localStorage.getItem('block2_color'));
-    document.getElementById('block2_name').textContent = window.localStorage.getItem('block2_name');
-  
-    document.getElementById('block3_color').classList.add('bg-' + window.localStorage.getItem('block3_color'));
-    document.getElementById('block3_name').textContent = window.localStorage.getItem('block3_name');
-  
-    document.getElementById('block4_color').classList.add('bg-' + window.localStorage.getItem('block4_color'));
-    document.getElementById('block4_name').textContent = window.localStorage.getItem('block4_name');
+    setBlockConfig('block1');
+    setBlockConfig('block2');
+    setBlockConfig('block3');
+    setBlockConfig('block4');
   }
-  */
-  
 });
 
 socket.addEventListener('open', function (event) {
@@ -56,19 +33,31 @@ socket.addEventListener('message', function (event) {
   }
 })
 
+function setBlockConfig(target){
+  const colors = ['danger','primary','success','warning'];
+  var json =  JSON.parse(window.localStorage.getItem(target));
+  document.querySelector("#" + target + " div[name='color']").classList.add('bg-' + colors[json.color - 1]);
+  document.querySelector("#" + target + " h3[name='name']").textContent = json.name;
+}
+
 function send(){
-  var score = Number(document.getElementById('b1_score').textContent);
-  var level = Number(document.getElementById('b1_level').value);
-  var hidden0 = document.getElementById('btncheck1').checked;
-  var hidden1 = document.getElementById('btncheck2').checked;
-  var hidden2 = document.getElementById('btncheck3').checked;
-  socket.send(JSON.stringify({"to":"block1","score":score,"level":level,"hidden0":hidden0,"hidden1":hidden1,"hidden2":hidden2}));
+  console.log(createJSON('block1'));
+  //socket.send();
+}
+
+function createJSON(target){
+  var to = JSON.parse(window.localStorage.getItem(target)).to;
+  var score = Number(document.querySelector("#" + target + " p[name='score']").textContent);
+  var level = Number(document.querySelector("#" + target + " input[name='level']").value);
+  var hidden = document.querySelectorAll("#" + target + " input[name='" + target + "_hidden']");
+  console.log(hidden);
+  return JSON.stringify({"to":to,"score":score,"level":level,"hidden0":hidden[0].checked,"hidden1":hidden[1].checked,"hidden2":hidden[2].checked});
 }
 
 function score_append(element,append){
-  var score = Number(document.querySelector('#' + element + " #score").textContent);
+  var score = Number(document.querySelector('#' + element + " p[name='score']").textContent);
   score += append;
   if(score > 999) score = 999;
   if(score < 0) score = 0;
-  document.querySelector('#' + element + " #score").textContent = String(score).padStart(3,'0');
+  document.querySelector('#' + element + " p[name='score']").textContent = String(score).padStart(3,'0');
 }
