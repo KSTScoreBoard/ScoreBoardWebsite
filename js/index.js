@@ -45,6 +45,7 @@ function send(){
   socket.send(createJSON('block2'));
   socket.send(createJSON('block3'));
   socket.send(createJSON('block4'));
+  alert('送信しました');
 
 }
 
